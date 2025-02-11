@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: controle-despesas
+
+  output:
+    ansi:
+      enabled: ALWAYS
+
+  jwt:
+    public-key: classpath:app.pub
+    private-key: classpath:app.key
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    properties:
+      hibernate.format_sql: true
+
+  logging:
+    level:
+      org.springframework: DEBUG
+      org.springframework.security: DEBUG
+      org.springframework.security.web: DEBUG
+      org.springframework.security.authentication: DEBUG
+
